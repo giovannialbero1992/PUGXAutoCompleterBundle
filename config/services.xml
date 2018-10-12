@@ -11,11 +11,11 @@
 
     <services>
         <service id="pugx_autocompleter.autocomplete" class="%pugx_autocompleter.autocomplete.class%" public="true">
-            <argument type="service" id="doctrine"/>
+            <argument type="service" id="Doctrine\Common\Persistence\ManagerRegistry"/>
             <tag name="form.type" alias="autocomplete" />
         </service>
         <service id="pugx_autocompleter.filter_autocomplete" class="%pugx_autocompleter.filter_autocomplete.class%" public="true">
-            <argument type="service" id="doctrine"/>
+            <argument type="service" id="Doctrine\Common\Persistence\ManagerRegistry"/>
             <tag name="form.type" alias="filter_autocomplete" />
         </service>
         <service id="pugx_autocompleter.filter.doctrine_subscriber" class="PUGX\AutocompleterBundle\Listener\FilterSubscriber" public="true">
